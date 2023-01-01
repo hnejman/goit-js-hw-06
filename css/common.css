@@ -22,3 +22,19 @@ button {
   padding: 8px 12px;
   cursor: pointer;
 }
+
+.gallery{
+  display: flex;
+  list-style: none;
+}
+
+.gallery img{
+  width: 30vw;
+  height: 10vw;
+  margin: 5px;
+}
+
+.gallery img{
+  width: 30vw;
+  object-fit: cover;
+}

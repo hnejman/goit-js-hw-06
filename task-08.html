@@ -23,6 +23,16 @@
         padding: 4px;
         font: inherit;
       }
+
+      .login-form__alert-on{
+        display: block;
+        color: tomato;
+      }
+
+      .login-form__alert-off{
+        display: none;
+      }
+
     </style>
   </head>
   <body>
@@ -31,10 +41,12 @@
     <form class="login-form">
       <label>
         Email
+        <p class="login-form__alert-off">Email field shouldn't be empty</p>
         <input type="email" name="email" />
       </label>
       <label>
         Password
+        <p class="login-form__alert-off">Password field shouldn't be empty</p>
         <input type="password" name="password" />
       </label>
       <button type="submit">Login</button>
