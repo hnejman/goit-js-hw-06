@@ -8,8 +8,8 @@ function createBoxes(amount){
   for(let i = 0; i < amount; i++){
     const el = document.createElement("div");
     el.style.backgroundColor = getRandomHexColor();
-    el.style.width = 30 + i * 10 + "px";
-    el.style.height = 30 + i * 10 + "px";
+    el.style.width = 30 + lastId * 10 + "px";
+    el.style.height = 30 + lastId * 10 + "px";
     lastId++;
     el.id="box"+lastId+"box";
     output.insertAdjacentElement("afterbegin", el);
