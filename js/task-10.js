@@ -16,16 +16,12 @@ function createBoxes(amount){
   }
 }
 
-function destroyBoxes(amount){
-  if(amount > lastId){
-    console.log("error");
-    return 0;
-  }
-  for(let i = 0; i < amount; i++){
-    const box = document.querySelector("#box"+lastId+"box");
+function destroyBoxes(){
+  while(output.children.length!=0){
+    const box = output.lastChild;
     box.remove();
-    lastId--;
-  }
+  };
+  lastId=0;
 }
 
 const input = document.querySelector("#controls");
@@ -41,7 +37,7 @@ inputCreate.addEventListener("click", click=>{
 inputCreate.click();
 
 inputDestroy.addEventListener("click", click => {
-  destroyBoxes(inputValue.value);
+  destroyBoxes();
 })
 
 inputDestroy.click();
