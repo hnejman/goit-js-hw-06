@@ -1,12 +1,14 @@
-const textInput = document.querySelector(".form");
+const textInput = document.querySelector("#name-input");
 const textOutput = document.querySelector("#name-output");
+console.log(textInput);
+console.log(textOutput);
 
 textInput.addEventListener("input", event =>{
     event.preventDefault();
-    if(event.target.childNodes[1].value === ""){
-        textOutput.textContent = "input";
+    if(textInput.value === ""){
+        textOutput.textContent = "Anonymus";
     }
     else{
-        textOutput.textContent = event.target.childNodes[1].value;
+        textOutput.textContent = textInput.value;
     }
 });
